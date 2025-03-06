@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Story Share</title>
+</head>
+<body>
+    <h2 id="storyText">hi</h2>
+    <button onclick="shareToInstagram()">Send</button>
+
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <script>
+        async function shareToInstagram() {
+            const text = document.getElementById("storyText").innerText;
+
+            // Step 1: Convert text to an image
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+
+            canvas.width = 1080;
+            canvas.height = 1920;
+            ctx.fillStyle = "#fff"; // White background
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#000"; // Black text
+            ctx.font = "bold 80px Arial";
+            ctx.textAlign = "center";
+            ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+            // Step 2: Convert canvas to a Blob
+            canvas.toBlob(async (blob) => {
+                let file = new File([blob], "story.png", { type: "image/png" });
+
+                // Step 3: Use Web Share API to open Instagram share menu
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    try {
+                        await navigator.share({
+                            files: [file],
+                            title: "Instagram Story",
+                            text: "Share this on Instagram!",
+                        });
+                    } catch (error) {
+                        console.error("Error sharing:", error);
+                    }
+                } else {
+                    alert("Sharing not supported. Please upload manually.");
+                }
+            }, "image/png");
+        }
+    </script>
+</body>
+</html>
