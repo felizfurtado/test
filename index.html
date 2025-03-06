@@ -9,8 +9,6 @@
     <h2 id="storyText">hi</h2>
     <button onclick="shareToInstagram()">Send</button>
 
-    <h3>puski</h3>
-
     <canvas id="canvas" style="display:none;"></canvas>
 
     <script>
@@ -35,7 +33,7 @@
             canvas.toBlob(async (blob) => {
                 let file = new File([blob], "story.png", { type: "image/png" });
 
-                // Step 3: Use Web Share API to open Instagram share menu
+                // Step 3: Try Web Share API
                 if (navigator.canShare && navigator.canShare({ files: [file] })) {
                     try {
                         await navigator.share({
@@ -47,7 +45,16 @@
                         console.error("Error sharing:", error);
                     }
                 } else {
-                    alert("Sharing not supported. Please upload manually.");
+                    // Step 4: Open Instagram's Story Intent (Android)
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        let imageData = event.target.result;
+                        let blobUrl = URL.createObjectURL(blob);
+
+                        let intentUrl = `intent://story_camera#Intent;package=com.instagram.android;scheme=instagram;end;`;
+                        window.location.href = intentUrl;
+                    };
+                    reader.readAsDataURL(blob);
                 }
             }, "image/png");
         }
