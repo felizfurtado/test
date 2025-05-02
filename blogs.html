@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Bonita Fernandes</title>
+    <title>Sacred Insights | Bonita Fernandes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="nav.css">
+
     <link
       href="https://db.onlinewebfonts.com/c/1dc7840abb13fcda12aa8d1cb21fb832?family=Agrandir"
       rel="stylesheet"
@@ -39,8 +40,8 @@
       
       /* NAVBAR (copy from previous CSS) */
       
-      /* CONTACT HERO */
-      .contact-hero {
+      /* BLOG HERO */
+      .blog-hero {
         min-height: 50vh;
         padding: 180px 5% 100px;
         text-align: center;
@@ -48,21 +49,151 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--bg-color);
       }
       
-      .contact-hero h1 {
+      .blog-hero h1 {
         font-family: "Agrandir";
+
         font-size: 5rem;
         margin-bottom: 1.5rem;
         font-weight: 400;
       }
       
-      .contact-hero p {
+      .blog-hero p {
         font-family: "Montserrat", sans-serif;
         font-size: 1.3rem;
         max-width: 700px;
         margin: 0 auto;
+        opacity: 0.9;
+      }
+      
+      /* BLOG GRID */
+      .blog-container {
+        max-width: 1200px;
+        margin: 80px auto;
+        padding: 0 5%;
+      }
+      
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+      }
+      
+      .blog-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px -10px rgba(90,74,66,0.1);
+        transition: all 0.4s ease;
+      }
+      
+      .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px -10px rgba(90,74,66,0.15);
+      }
+      
+      .blog-image {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      .blog-content {
+        padding: 30px;
+      }
+      
+      .blog-category {
+        display: inline-block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        color: var(--color-secondary);
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      
+      .blog-card h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+      
+      .blog-card p {
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 25px;
+        opacity: 0.9;
+        line-height: 1.8;
+      }
+      
+      .blog-meta {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
+        color: var(--color-primary);
+        opacity: 0.7;
+        margin-bottom: 20px;
+      }
+      
+      .blog-btn {
+        display: inline-flex;
+        align-items: center;
+        color: var(--color-secondary);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      
+      .blog-btn i {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+      }
+      
+      .blog-btn:hover {
+        color: var(--color-primary);
+      }
+      
+      .blog-btn:hover i {
+        transform: translateX(5px);
+      }
+      
+      /* NEWSLETTER SECTION */
+      .newsletter {
+        background: rgba(255,255,255,0.7);
+        padding: 80px 5%;
+        text-align: center;
+      }
+      
+      .newsletter-form {
+        max-width: 500px;
+        margin: 40px auto 0;
+        display: flex;
+      }
+      
+      .newsletter-input {
+        flex: 1;
+        padding: 15px 20px;
+        border: 1px solid rgba(90,74,66,0.2);
+        border-radius: 30px 0 0 30px;
+        font-family: "Montserrat", sans-serif;
+      }
+      
+      .newsletter-btn {
+        background: var(--gradient);
+        color: white;
+        border: none;
+        padding: 0 30px;
+        border-radius: 0 30px 30px 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .newsletter-btn:hover {
         opacity: 0.9;
       }
       
@@ -79,299 +210,64 @@
         50% { transform: translateY(-20px) rotate(2deg); }
       }
       
-      /* CONTACT SECTIONS */
-      .contact-container {
-        max-width: 1200px;
-        margin: 80px auto;
-        padding: 0 5%;
-      }
-      
-      .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 40px;
-        margin-bottom: 80px;
-      }
-      
-      .contact-card {
-        background: white;
-        border-radius: 15px;
-        padding: 50px 40px;
-        text-align: center;
-        box-shadow: 0 15px 40px -10px rgba(90,74,66,0.1);
-        transition: all 0.4s ease;
-      }
-      
-      .contact-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 50px -10px rgba(90,74,66,0.15);
-      }
-      
-      .contact-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--gradient);
-        color: white;
-        border-radius: 50%;
-        font-size: 1.8rem;
-      }
-      
-      .contact-card h3 {
-        font-family: "Playfair Display", serif;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        font-weight: 500;
-      }
-      
-      .contact-card p {
-        font-family: "Montserrat", sans-serif;
-        margin-bottom: 25px;
-        opacity: 0.9;
-        line-height: 1.8;
-      }
-      
-      .contact-link {
-        display: inline-block;
-        padding: 12px 30px;
-        background: var(--color-primary);
-        color: white;
-        font-family: "Montserrat", sans-serif;
-        text-decoration: none;
-        border-radius: 30px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-      
-      .contact-link:hover {
-        background: var(--color-secondary);
-      }
-      
-      /* CONTACT FORM */
-      .form-section {
-        background: white;
-        border-radius: 15px;
-        padding: 60px;
-        margin-bottom: 80px;
-        box-shadow: 0 15px 40px -10px rgba(90,74,66,0.1);
-      }
-      
-      .form-section h2 {
-        font-family: "Agrandir";
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 40px;
-        font-weight: 400;
-      }
-      
-      .contact-form {
-        max-width: 700px;
-        margin: 0 auto;
-      }
-      
-      .form-group {
-        margin-bottom: 25px;
-      }
-      
-      .form-group label {
-        display: block;
-        font-family: "Montserrat", sans-serif;
-        margin-bottom: 8px;
-        font-weight: 500;
-      }
-      
-      .form-control {
-        width: 100%;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1rem;
-        transition: all 0.3s;
-      }
-      
-      .form-control:focus {
-        outline: none;
-        border-color: var(--color-secondary);
-        box-shadow: 0 0 0 3px rgba(219, 136, 164, 0.2);
-      }
-      
-      textarea.form-control {
-        min-height: 150px;
-        resize: vertical;
-      }
-      
-      .submit-btn {
-        display: inline-block;
-        padding: 16px 40px;
-        background: var(--gradient);
-        color: white;
-        font-family: "Montserrat", sans-serif;
-        text-decoration: none;
-        border: none;
-        border-radius: 30px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 1.1rem;
-        margin-top: 10px;
-      }
-      
-      .submit-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(219, 136, 164, 0.3);
-      }
-      
-      /* LOCATION SECTION */
-      .location-section {
-        margin-bottom: 80px;
-      }
-      
-      .location-section h2 {
-        font-family: "Agrandir";
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 40px;
-        font-weight: 400;
-      }
-      
-      .map-container {
-        height: 400px;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 15px 40px -10px rgba(90,74,66,0.1);
-      }
-      
-      .map-container iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-      
-      /* FAQ SECTION */
-      .faq-section {
-        margin-bottom: 80px;
-      }
-      
-      .faq-section h2 {
-        font-family: "Agrandir";
-        font-size: 3rem;
-        text-align: center;
-        margin-bottom: 40px;
-        font-weight: 400;
-      }
-      
-      .faq-item {
-        background: white;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        box-shadow: 0 5px 15px rgba(90,74,66,0.05);
-        overflow: hidden;
-      }
-      
-      .faq-question {
-        padding: 20px 25px;
-        font-family: "Playfair Display", serif;
-        font-size: 1.3rem;
-        font-weight: 500;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .faq-question:hover {
-        background-color: rgba(219, 136, 164, 0.05);
-      }
-      
-      .faq-question i {
-        transition: transform 0.3s ease;
-      }
-      
-      .faq-answer {
-        padding: 0 25px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease, padding 0.3s ease;
-        font-family: "Montserrat", sans-serif;
-        line-height: 1.7;
-      }
-      
-      .faq-item.active .faq-question i {
-        transform: rotate(180deg);
-      }
-      
-      .faq-item.active .faq-answer {
-        max-height: 500px;
-        padding: 0 25px 25px;
-      }
+      /* FOOTER (copy from previous CSS) */
       
       /* RESPONSIVE */
       @media (max-width: 768px) {
-        .contact-hero h1 { font-size: 3.5rem; }
-        .contact-grid { grid-template-columns: 1fr; }
-        .form-section { padding: 40px 25px; }
-        .faq-question { font-size: 1.1rem; }
-      }
-      
-      @media (max-width: 480px) {
-        .contact-hero { padding: 150px 5% 80px; }
-        .contact-hero h1 { font-size: 2.8rem; }
-        .contact-hero p { font-size: 1.1rem; }
-        .form-section h2, 
-        .location-section h2,
-        .faq-section h2 { font-size: 2.5rem; }
+        .blog-hero h1 { font-size: 3.5rem; }
+        .blog-grid { grid-template-columns: 1fr; }
+        .newsletter-form { flex-direction: column; }
+        .newsletter-input { border-radius: 30px; margin-bottom: 15px; }
+        .newsletter-btn { border-radius: 30px; padding: 15px; }
       }
     </style>
 </head>
 <body>
     <div class="header-gradient"></div>
 
-    <!-- Same Navbar as Original -->
+    <!-- NAVBAR (copy from previous HTML) -->
     <nav>
-      <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <div class="nav-links left-links">
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+  
+        <div class="nav-links left-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="about.html">Services</a>
+        </div>
+  
+     
+        <div class="logo" style="font-family:'Gistesy', sans-serif ;">
+          Bonita <span style="color: #db88a4">•</span> Fernandes
+        </div>
+  
+        <div class="nav-links right-links">
+          <a href="workshops.html">Workshops</a>
+          <a href="workshops.html">Blogs</a>
+          <a href="contact.html" class="active">Contact</a>
+        </div>
+      </nav>
+  
+      <div class="mobile-nav" id="mobileNav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-      </div>
-
-      <div class="logo" style="font-family: 'Gistesy', sans-serif;
-">
-        Bonita <span style="color: #db88a4">•</span> Fernandes
-      </div>
-
-      <div class="nav-links right-links">
+        <a href="about.html">Services</a>
+          <a href="workshops.html">Blogs</a>
         <a href="workshops.html">Workshops</a>
-        <a href="blogs.html">Blogs</a>
         <a href="contact.html" class="active">Contact</a>
       </div>
-    </nav>
 
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="about.html">Services</a>
-        <a href="workshops.html">Blogs</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="contact.html" class="active">Contact</a>
-    </div>
-
-    <!-- CONTACT HERO -->
-    <section class="contact-hero">
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
       <div class="floating-shape" style="width:300px; height:300px; background:#a5c3d5; top:20%; right:10%;"></div>
       <div class="floating-shape" style="width:250px; height:250px; background:#db88a4; bottom:20%; left:10%; animation-delay:2s;"></div>
       
       <div>
-        <h1>Let's Connect</h1>
-        <p>Your healing journey begins with a single step. Reach out with any questions or to schedule your first session.</p>
+        <h1>Sacred Insights</h1>
+        <p>Explore writings on holistic healing, spiritual growth, and the journey toward wholeness.</p>
       </div>
+
 
       <style>
 
@@ -386,6 +282,9 @@
             rotate: -50deg;
         }
 
+
+
+
       </style>
 
 
@@ -394,383 +293,150 @@
 
     </section>
 
-    <!-- CONTACT OPTIONS -->
-    <div class="contact-container">
-      <div class="contact-grid">
-        <!-- EMAIL -->
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
+    <!-- BLOG GRID -->
+    <div class="blog-container">
+      <!-- <div class="blog-grid">
+  
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Meditation" class="blog-image">
+          <div class="blog-content">
+            <span class="blog-category">Mindfulness</span>
+            <h3>The Art of Being Present</h3>
+            <p>How cultivating mindfulness can transform your relationships with yourself and others.</p>
+            <div class="blog-meta">
+              <span>June 12, 2023</span>
+              <span>5 min read</span>
+            </div>
+            <a href="#" class="blog-btn">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
-          <h3>Email Me</h3>
-          <p>For general inquiries or questions about my services, email is the fastest way to reach me.</p>
-          <a href="mailto:hello@bonitafernandes.com" class="contact-link">Send Email</a>
+        </div>
+ 
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tarot cards" class="blog-image">
+          <div class="blog-content">
+            <span class="blog-category">Intuition</span>
+            <h3>Tarot as a Mirror of the Soul</h3>
+            <p>Using archetypes to understand subconscious patterns and facilitate healing.</p>
+            <div class="blog-meta">
+              <span>May 28, 2023</span>
+              <span>8 min read</span>
+            </div>
+            <a href="#" class="blog-btn">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
         
-        <!-- PHONE -->
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-phone-alt"></i>
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1520&q=80" alt="Yoga" class="blog-image">
+          <div class="blog-content">
+            <span class="blog-category">Somatics</span>
+            <h3>Releasing Trauma Through the Body</h3>
+            <p>Gentle movement practices to process emotional memories stored in our tissues.</p>
+            <div class="blog-meta">
+              <span>April 15, 2023</span>
+              <span>10 min read</span>
+            </div>
+            <a href="#" class="blog-btn">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
-          <h3>Call Me</h3>
-          <p>Prefer to talk directly? Call my office during business hours for personal assistance.</p>
-          <a href="tel:+14155556789" class="contact-link">(415) 555-6789</a>
         </div>
         
-        <!-- BOOKING -->
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1511376777868-611b54f68947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Energy work" class="blog-image">
+          <div class="blog-content">
+            <span class="blog-category">Energy Healing</span>
+            <h3>Understanding Your Aura</h3>
+            <p>A beginner's guide to sensing and cleansing your energetic field for emotional balance.</p>
+            <div class="blog-meta">
+              <span>March 22, 2023</span>
+              <span>6 min read</span>
+            </div>
+            <a href="#" class="blog-btn">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
         
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Journaling" class="blog-image">
+          <div class="blog-content">
+            <span class="blog-category">Self-Reflection</span>
+            <h3>The Healing Power of Journaling</h3>
+            <p>Transformative writing prompts to deepen your self-awareness and growth.</p>
+            <div class="blog-meta">
+              <span>February 8, 2023</span>
+              <span>7 min read</span>
+            </div>
+            <a href="#" class="blog-btn">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
         
-      </div>
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Nature" class="blog-image">
+          <div class="blog-content">
+            <span class="blog-category">Nature Therapy</span>
+            <h3>Grounding in Earth's Wisdom</h3>
+            <p>How connecting with nature can restore our nervous system and spiritual center.</p>
+            <div class="blog-meta">
+              <span>January 15, 2023</span>
+              <span>9 min read</span>
+            </div>
+            <a href="#" class="blog-btn">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div> -->
+
+<div class="blog-grid">
+  
+</div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  fetch('blog.json')
+    .then(response => response.json())
+    .then(data => {
+      const blogGrid = document.querySelector('.blog-grid');
       
-      <!-- CONTACT FORM -->
-      <div class="form-section">
-        <h2>Send a Message</h2>
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" class="form-control" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" class="form-control" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="phone">Phone Number (optional)</label>
-            <input type="tel" id="phone" class="form-control">
-          </div>
-          
-          <div class="form-group">
-            <label for="service">Service Interested In</label>
-            <select id="service" class="form-control">
-              <option value="">Select a service</option>
-              <option value="counseling">1:1 Counseling</option>
-              <option value="coaching">Life Coaching</option>
-              <option value="energy">Energy Readings</option>
-              <option value="tarot">Tarot Readings</option>
-              <option value="other">Other Inquiry</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" class="form-control" required></textarea>
-          </div>
-          
-          <div style="text-align: center;">
-            <button type="submit" class="submit-btn">Send Message</button>
-          </div>
-        </form>
-      </div>
+      // Clear any existing content (if needed)
+      blogGrid.innerHTML = '';
       
-      <!-- LOCATION -->
-      <div class="location-section">
-        <h2>My Studio</h2>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.158170858954!2d-122.419906924369!3d37.779026971955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2s123%20Healing%20Path%2C%20San%20Francisco%2C%20CA%2094102!5e0!3m2!1sen!2sus!4v1689876543210!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-      
-      <!-- FAQ -->
-      <div class="faq-section">
-        <h2>Common Questions</h2>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How soon can I schedule my first session?</span>
-            <i class="fas fa-chevron-down"></i>
+      // Loop through each post and create HTML
+      data.posts.forEach(post => {
+        const blogCard = document.createElement('div');
+        blogCard.className = 'blog-card';
+        blogCard.innerHTML = `
+          <img src="${post.image}" alt="${post.alt}" class="blog-image">
+          <div class="blog-content">
+            <span class="blog-category">${post.category}</span>
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+            <div class="blog-meta">
+              <span>${post.date}</span>
+              <span>${post.readTime}</span>
+            </div>
+            <a href="#" class="blog-btn">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="faq-answer">
-            <p>I typically have availability within 1-2 weeks for new clients. For urgent matters, please call my office as I may be able to accommodate last-minute cancellations.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What is your cancellation policy?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>I require 24 hours notice for cancellations to avoid being charged for the session. Emergencies are considered on a case-by-case basis.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Do you offer sliding scale rates?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, I reserve a limited number of sliding scale spots for those with financial need. Please inquire about availability when you contact me.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What payment methods do you accept?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>I accept all major credit cards, PayPal, Venmo, and cash. Payment is due at the time of service unless other arrangements have been made.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Do you offer virtual sessions?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Yes, all of my services are available both in-person at my San Francisco studio and via secure video conference.</p>
-          </div>
-        </div>
-      </div>
+        `;
+        blogGrid.appendChild(blogCard);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading blog posts:', error);
+      // You could display an error message to users here
+    });
+});
+      </script>
     </div>
 
-    <style>
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter">
+      <h2 style="font-family:'Parisienne'; font-size:3rem; margin-bottom:20px;">Join Our Circle</h2>
+      <p style="font-family:'Montserrat'; max-width:600px; margin:0 auto; opacity:0.9;">
+        Receive monthly insights on holistic healing, exclusive content, and announcements about upcoming workshops.
+      </p>
       
-      
-        /* CTA Section */
-        .cta-section {
-            max-height: 60vh;
-            width: 100%;
-            padding: 80px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: white;
-            border-top-right-radius: 2cap;
-            border-top-left-radius: 2cap;
-        }
-      
-        .cta-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 3;
-        }
-      
-        .cta-section h2 {
-            font-family: "Agrandir";
-            font-size: 3.5rem;
-            color: var(--color-primary);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            line-height: 1.2;
-        }
-      
-        .cta-section p {
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.2rem;
-            color: var(--color-primary);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-      
-        .cta-btn {
-            display: inline-block;
-            padding: 18px 50px;
-            background: #94afcb;
-      
-            color: white;
-            font-family: "Montserrat", sans-serif;
-            text-decoration: none;
-            border-radius: 40px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 25px #b9b9b9;
-      
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-        }
-      
-        .cta-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #d17595, #e8a8ba);
-      
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-      
-        .cta-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px #b9b9b9;
-      
-        }
-      
-        .cta-btn:hover::before {
-            opacity: 1;
-        }
-      
-        .cta-btn i {
-            margin-left: 10px;
-            transition: transform 0.3s ease;
-        }
-      
-        .cta-btn:hover i {
-            transform: translateX(5px);
-        }
-      
-        /* Background Elements */
-        .cta-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            overflow: hidden;
-        }
-      
-        .cta-shape {
-            position: absolute;
-            opacity: 0.1;
-            filter: blur(30px);
-            animation: float 12s ease-in-out infinite;
-        }
-      
-        .cta-shape-1 {
-            width: 300px;
-            height: 300px;
-            background: #a5c3d5;
-            top: 15%;
-            right: 10%;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            animation-delay: 0s;
-        }
-      
-        .cta-shape-2 {
-            width: 250px;
-            height: 250px;
-            background: #db88a4;
-            bottom: 10%;
-            left: 10%;
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            animation-delay: 2s;
-            animation-duration: 14s;
-        }
-      
-        /* Floating Emojis */
-        .cta-emoji {
-            position: absolute;
-            font-size: 24px;
-            opacity: 0.15;
-            z-index: 1;
-            animation: float 8s ease-in-out infinite;
-        }
-      
-        .cta-emoji-1 { top: 20%; left: 15%; animation-delay: 0s; }
-        .cta-emoji-2 { bottom: 25%; right: 20%; animation-delay: 2s; }
-        .cta-emoji-3 { top: 30%; right: 25%; animation-delay: 1s; }
-      
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
-            25% { transform: translateY(-20px) translateX(10px) rotate(2deg); }
-            50% { transform: translateY(10px) translateX(-15px) rotate(-2deg); }
-            75% { transform: translateY(-15px) translateX(5px) rotate(1deg); }
-        }
-      
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .cta-section h2 {
-                font-size: 3rem;
-            }
-            
-            .cta-section p {
-                font-size: 1.1rem;
-            }
-            
-            .cta-btn {
-                padding: 16px 45px;
-                font-size: 1rem;
-            }
-        }
-      
-        @media (max-width: 768px) {
-            .cta-section {
-                min-height: 50vh;
-                padding: 60px 5%;
-            }
-            
-            .cta-section h2 {
-                font-size: 2.5rem;
-            }
-            
-            .cta-section p {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-            
-            .cta-shape-1,
-            .cta-shape-2 {
-                width: 200px;
-                height: 200px;
-            }
-        }
-      
-        @media (max-width: 480px) {
-            .cta-section h2 {
-                font-size: 2.2rem;
-            }
-            
-            .cta-btn {
-                padding: 14px 40px;
-            }
-            
-            .cta-shape-1,
-            .cta-shape-2 {
-                width: 150px;
-                height: 150px;
-                filter: blur(20px);
-            }
-            
-            .cta-emoji {
-                font-size: 20px;
-            }
-        }
-      </style>
-
-    <!-- Same CTA Section as Services Page -->
-    <section class="cta-section">
-      <div class="cta-bg">
-          <div class="cta-shape cta-shape-1"></div>
-          <div class="cta-shape cta-shape-2"></div>
-      </div>
-      
-      <!-- Floating emojis -->
-      <div class="cta-emoji cta-emoji-1">🌸</div>
-      <div class="cta-emoji cta-emoji-2">✨</div>
-      <div class="cta-emoji cta-emoji-3">🌿</div>
-      
-      <div class="cta-content">
-          <h2>Ready to Begin Your Journey?</h2>
-          <p>
-              Take the first step towards healing and transformation. Book your session today 
-              and discover the peace and clarity you've been seeking.
-          </p>
-          <a href="#" class="cta-btn">Schedule a Session <i class="fas fa-arrow-right"></i></a>
-      </div>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" class="newsletter-input" required>
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
     </section>
+
+
 
     <style>
 
@@ -795,7 +461,6 @@
         
         .footer-logo {
           font-family: 'Gistesy', sans-serif;
-
             font-size: 2.2rem;
             font-weight: 400;
             margin-bottom: 1.5rem;
@@ -985,6 +650,8 @@
       </div>
     </footer>
 
+    <!-- FOOTER (copy from previous HTML) -->
+
     <script>
       // Mobile menu functionality (same as previous)
       document.addEventListener('DOMContentLoaded', function() {
@@ -1003,22 +670,6 @@
             link.addEventListener('click', () => {
               mobileNav.classList.remove('active');
               hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-          });
-          
-          // FAQ accordion functionality
-          const faqQuestions = document.querySelectorAll('.faq-question');
-          faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-              const item = question.parentNode;
-              item.classList.toggle('active');
-              
-              // Close other open items
-              faqQuestions.forEach(q => {
-                if (q !== question) {
-                  q.parentNode.classList.remove('active');
-                }
-              });
             });
           });
       });
