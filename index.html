@@ -34,6 +34,8 @@
           #eec6c7,
           #db88a4
         );
+
+        --gradient2: linear-gradient(135deg, #A8D1E7,  #FFBFC5, #EB8DB5, #D4A3C4);
         --bg-color: #f6f0eb;
       }
 
@@ -260,7 +262,7 @@
       .btn {
         display: inline-block;
         padding: 12px 30px;
-        background: #94afcb;
+        background: var(--gradient2);
         color: white;
         font-family: "Montserrat", sans-serif;
         text-decoration: none;
@@ -280,7 +282,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background: linear-gradient(135deg, #d17595, #e8a8ba);
+        background-color: var(--gradient2);
         height: 100%;
         z-index: -1;
         opacity: 0;
@@ -290,7 +292,8 @@
       .btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(135deg, #d17595, #e8a8ba);
+        background: var(--gradient2);
+
       }
 
       /* Decorative Elements */
@@ -468,7 +471,7 @@
         .cta-button {
             display: inline-block;
             padding: 12px 30px;
-            background-color:#94afcb;
+            background: var(--gradient2);
             color: white;
             font-family: "Montserrat", sans-serif;
             text-decoration: none;
@@ -485,7 +488,8 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(219, 136, 164, 0.3);
-            background: var(--color-secondary);
+            background: var(--gradient2);
+
         }
 
 
@@ -833,7 +837,7 @@
       .hero-btn  , .btn {
         display: inline-block;
         padding: 13px 40px;
-        background-color: #94afcb;
+        background: var(--gradient2);
         color: white;
         font-family: "Montserrat", sans-serif;
         text-decoration: none;
@@ -855,7 +859,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #d17595, #e8a8ba);
+        background: var(--gradient2);
+
         z-index: -1;
         opacity: 0;
         transition: opacity 0.4s ease;
@@ -864,6 +869,8 @@
       .hero-btn:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 30px rgba(219, 136, 164, 0.4);
+        background: var(--gradient2);
+
       }
 
       .hero-btn:hover::before {
@@ -937,7 +944,8 @@
 
 
       .hero-btn:hover {
-        background-color: #3a5a80;
+        background: var(--gradient2);
+
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
@@ -968,7 +976,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #94afcb;
+        background: var(--gradient2);
         
       }
 
@@ -976,6 +984,8 @@
       .s2 a:hover {
         background: var(--gradient);
         transform: translateY(-3px);
+        background: var(--gradient2);
+
       }
 
       /* Responsive styles */
@@ -1735,7 +1745,7 @@
       .cta-btn {
         display: inline-block;
         padding: 18px 50px;
-        background: #94afcb;
+        background: var(--gradient2);
         color: white;
         font-family: "Montserrat", sans-serif;
         text-decoration: none;
@@ -1760,7 +1770,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #d17595, #e8a8ba);
+        background: var(--gradient2);
+
 
         z-index: -1;
         opacity: 0;
@@ -1770,6 +1781,8 @@
       .cta-btn:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 25px #b9b9b9;
+        background: var(--gradient2);
+
       }
 
       .cta-btn:hover::before {
