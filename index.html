@@ -75,7 +75,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 2rem 5%;
-        position: fixed;
+        position: relative;
         width: 100%;
         background-color: rgba(246, 240, 235, 0.9);
         backdrop-filter: blur(10px);
@@ -881,7 +881,7 @@
     <style>
       .hero-section {
         display: flex;
-        min-height: 100vh;
+        min-height: 80vh;
         width: 100%;
         padding: 0 10%;
         align-items: center;
@@ -909,7 +909,7 @@
 
       .hero-image img {
         max-width: 100%;
-        max-height: 75vh;
+        max-height: 68vh;
         border-radius: 10px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
@@ -988,6 +988,9 @@
           flex-direction: column;
           padding: 80px 5%;
           text-align: left;
+          border: #5a4a42 3px solid;
+
+
         }
 
         .hero-content {
@@ -1022,8 +1025,16 @@
       }
 
       @media (max-width: 576px) {
+
+        .hero-section {
+          border: #5a4a42 5px solid;
+          margin: 1rem 1rem;
+          padding: 1rem;
+
+        }
         .hero-title {
           font-size: 2.2rem;
+
         }
 
         .hero-subtitle {
@@ -1050,13 +1061,14 @@
       <style>
         .rectangle {
           position: absolute;
-          top: 54%;
+          top: 52.5%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 90%;
-          height: 82%;
-          z-index: 1;
+          height: 95%;
+          z-index: 3;
           border: #5a4a42 3px solid;
+          border-radius: 2cap;
         }
         @media (max-width: 768px) {
           .rectangle {
@@ -1070,16 +1082,11 @@
             top: 51%;
             left: 50%;
             width: 96vw;
-            height: 142vh;
-            display:none;
+            height: 141vh;
+            display: none;
           }
         }
 
-
-
-
-
-  
       </style>
 
       <div class="rectangle"></div>
