@@ -20,7 +20,9 @@
         --color-primary: #5a4a42;
         --color-secondary: #db88a4;
         --gradient: linear-gradient(135deg, #738fbd, #a8c3d4, #dbd6df, #eec6c7, #db88a4);
-        --gradient2: linear-gradient(135deg, #A8D1E7,  #FFBFC5, #EB8DB5, #D4A3C4);        --bg-color: #f6f0eb;
+        --gradient2: linear-gradient(135deg, #A8D1E7,  #FFBFC5, #EB8DB5, #D4A3C4);     
+        --bg-color: #fdfcfa;
+
       }
 
       * {
@@ -53,7 +55,7 @@
         padding: 2rem 5%;
         position: fixed;
         width: 100%;
-        background-color: rgba(246, 240, 235, 0.9);
+        background-color: var(--bg-color);
         backdrop-filter: blur(10px);
         z-index: 999;
       }
@@ -141,6 +143,7 @@
         padding: 180px 5% 100px;
         position: relative;
         overflow: hidden;
+        background: var(--bg-color);
       }
 
       .about-hero-content {
@@ -232,7 +235,7 @@ font-size: 5.5rem;
       /* Creative Approach Section */
       .creative-approach {
         padding: 50px 5%;
-        background: linear-gradient(to bottom, #f6f0eb 0%, #f6f0eb00 100%);
+        background: var(--bg-color);
         position: relative;
       }
 
@@ -282,7 +285,7 @@ font-size: 5.5rem;
         display: flex;
         margin-bottom: 60px;
         z-index: 2;
-        background: rgba(255,255,255,0.9);
+        background: var(--bg-color);
         padding: 25px;
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(90,74,66,0.08);
@@ -316,7 +319,7 @@ font-size: 5.5rem;
       /* Creative Credentials Section */
       .creative-credentials {
         padding: 100px 5%;
-        background: #f6f0eb;
+        background: #fdfcfa;
       }
 
       .credentials-container {
@@ -334,7 +337,7 @@ font-size: 5.5rem;
       }
 
       .certificate {
-        background: #f6f0eb;
+        background: #fdfcfa;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 10px 30px rgba(90,74,66,0.1);
