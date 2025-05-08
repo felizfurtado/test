@@ -42,7 +42,7 @@
           #eb8db5,
           #d4a3c4
         );
-        --bg-color: #f6f0eb;
+        --bg-color: #fdfcfa;
       }
 
       * {
@@ -75,9 +75,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 2rem 5%;
-        position: relative;
+        position: sticky;
+        top: 0;
         width: 100%;
-        background-color: rgba(246, 240, 235, 0.9);
+        background-color: var(--bg-color);
         backdrop-filter: blur(10px);
         z-index: 999;
       }
@@ -989,8 +990,6 @@
           padding: 80px 5%;
           text-align: left;
           border: #5a4a42 3px solid;
-
-
         }
 
         .hero-content {
@@ -1025,18 +1024,14 @@
       }
 
       @media (max-width: 576px) {
-
         .hero-section {
           border: #5a4a42 5px solid;
           padding: 1rem;
           margin: 0 auto;
-    max-width: calc(100% - 2rem);
-    box-sizing: border-box;
-          
+          max-width: calc(100% - 2rem);
         }
         .hero-title {
           font-size: 2.2rem;
-
         }
 
         .hero-subtitle {
@@ -1088,7 +1083,6 @@
             display: none;
           }
         }
-
       </style>
 
       <div class="rectangle"></div>
@@ -1139,7 +1133,90 @@
         <p class="tagline">Empowering You to Heal, Grow & Thrive</p>
         <a href="#" class="btn">Explore My Work</a>
         <br />
-        <p>
+
+        
+        <style>
+            .v1 {
+              display: block;
+            }
+            .v2 {
+              display: none;
+            }
+            .name {
+              font-family: "Agrandir";
+              font-size: 2rem;
+              color: var(--color-primary);
+              text-align: center;
+              margin-top: 10px;
+              position: absolute;
+              top: 67%;
+            }
+  
+            .name2 {
+              font-family: "Agrandir";
+              font-size: 1rem;
+              color: var(--color-primary);
+              text-align: center;
+              margin-top: 10px;
+              position: absolute;
+              top: 73%;
+            }
+  
+            .name3 {
+              font-family: "Agrandir";
+              font-size: 1rem;
+              color: var(--color-primary);
+              text-align: center;
+              margin-top: 10px;
+              position: absolute;
+              top: 73%;
+              display: none;
+            }
+  
+            @media (max-width: 768px) {
+              .name,
+              .watermark {
+                display: none;
+              }
+  
+              .name3{
+                  top: 60%;
+                  /* left: 19%; */
+                   
+                  display: flex;
+                  text-align: center;  
+                  font-weight: 900;
+              }
+
+              .pp{
+                margin-top: 70px;
+              }
+  
+  
+  
+              .v1{
+                  display: none;
+              }
+              .v2 {
+                display: block;
+              }
+            }
+          </style>
+        <div class="profile-image-container v2">
+          <img
+            class="profile-image v2"
+            src="WhatsApp Image 2025-04-25 at 5.45.04 PM.jpeg"
+            alt="Bonita Fernandes"
+          />
+          <br />
+
+        </div>
+
+
+          <center><p class="name3">Life Coach / Psychologist</p></center>
+     
+
+        <p class="pp">
           With 6+ years of experience in mental wellness, spiritual guidance,
           and energy work, I offer a heart-centered, holistic approach to
           personal growth. My mission is to support those seeking clarity,
@@ -1153,43 +1230,17 @@
       </div>
 
       <div class="image-content">
-        <div class="profile-image-container">
+        <div class="profile-image-container v1">
           <img
-            class="profile-image"
+            class="profile-image v1"
             src="WhatsApp Image 2025-04-25 at 5.45.04 PM.jpeg"
             alt="Bonita Fernandes"
           />
         </div>
 
-        <style>
-          .name {
-            font-family: "Agrandir";
-            font-size: 2rem;
-            color: var(--color-primary);
-            text-align: center;
-            margin-top: 10px;
-            position: absolute;
-            top: 67%;
-          }
 
-          .name2 {
-            font-family: "Agrandir";
-            font-size: 1rem;
-            color: var(--color-primary);
-            text-align: center;
-            margin-top: 10px;
-            position: absolute;
-            top: 73%;
-          }
-          @media (max-width: 768px) {
-            .name,
-            .watermark {
-              display: none;
-            }
-          }
-        </style>
         <h2 class="name">Bonita Fernandes</h2>
-        <p class="name2">Life Coach / Psychologist</p>
+        <p class="name2 v1">Life Coach / Psychologist</p>
       </div>
 
       <h3 class="watermark">HEALING</h3>
